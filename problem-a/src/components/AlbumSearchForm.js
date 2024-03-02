@@ -14,6 +14,8 @@ export default function AlbumSearchForm({searchCallback, isWaiting}) {
   const handleSubmit = (event) => {
     event.preventDefault();
 
+    let queryTextEncoded = encodeURIComponent(queryText);
+    searchCallback(queryTextEncoded);
   }
 
   return (
